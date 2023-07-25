@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap');
 
 :root{
     --mainTextColor-light:#000;
@@ -12,7 +12,7 @@
     --mainLinkColor-dark:rgb(30, 190,214);
     --mainBorderColor-dark:#2b3031;
     --mainBgColor-dark:#131415;
-    
+
     --mainTextColor:var(--mainTextColor-dark);
     --secondaryTextColor:var(--secondaryTextColor-dark);
     --mainLinkColor:var(--mainLinkColor-dark);
@@ -23,15 +23,15 @@
 
 
 *{
-    font-family: 'Readex Pro';
+    font-family: 'Ubuntu';
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
-    
+
 }
 
 body{
-    background-color: var(--mainBgColor);            
+    background-color: var(--mainBgColor);
 }
 
 p, span, li{
@@ -110,18 +110,12 @@ li{
     list-style: none;
 }
 
-#wrapper--techstack__items{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    font-size: 0.9em;
+#certifications--list{
+    list-style: none;
 }
 
-.card--techstack{
-    border: 1px solid var(--mainBorderColor);
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    align-items: center;
+#education--list{
+    list-style: none;
 }
 
 .card--project{
