@@ -1,1 +1,26 @@
+# do not allow anyone else to read your .htaccess file
+<Files .htaccess>
+deny from all
+</Files>
+
+# forbid viewing of directories
+Options All -Indexes
+
+# hide this list of files from being seen when listing a directory
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+# disable the server signature- helps with preformance
+ServerSignature Off
+
+# since it's out of fashion to use www- redirect URLs to non-www
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTPS} off          [OR]
+RewriteCond %{HTTP_HOST} ^www\.   [NC]
+RewriteRule ^ https://jamesflores.dev%{REQUEST_URI} [R=301,L,NE]
+# keep the URLs clean:
+# if someone asks for index.php- rewrite the URL without it
+RewriteRule ^(.*?)/?index\.php$ $1 [NC,R=301,L]
+
+# custom 404 page
 ErrorDocument 404 /404.html
